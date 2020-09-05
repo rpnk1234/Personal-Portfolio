@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+<div class="background">
+		<div class="image">
+				<img src="images/R10.jpg" alt="image1" width="660px" height="500px"/>
+			</div>
+	<div class="nav">
+		<a class="a active" href="#">HOME</a>
+		<a class="b" href="#">ABOUT ME</a>
+		<a class="c" href="https://drive.google.com/file/d/1bKlIr8CVgUNACO-Ag1Rnrpb8RrEGbyae/view?usp=sharing">My CV</a>
+		<a class="d" href="#">CONTACT US</a>
+	</div>
+	<div class="content">
+		<div class="home">
+			
+			<h1>I am Rohit Khatri</h1>
+			<h3>Junior Web Designer</h3>
+		</div>
+		<div class="aboutme">
+			<div class="image1">
+				<img src="images/R14.jpg" alt="image1" width="300px" height="400px"/>
+			</div>
+			<p><b>Hello Guys,</b><br><br>
+			 This is Rohit Khatri studying at Vivekananda Education Society of Information Technology in 3rd Year of IT Branch. I am glad to announce that it is my first Personal Profile Portfolio.<br>
+			 My Hobbies are playing cricket, listening music and web designing.<br>
+			 If you want you to communicate with you regarding any topic you can leave message in contact us. I will try to respond to any queries as soon as possible.</p>
+		</div>	
+		<div class="cv">
+		</div>
+		<div class="contactus">
+			<div class="contactform">
+			 	<form action="mailto:rpnk1234@gmail.com" method="get" enctype="text/plain">
+					<input type="text" name="" class="inputtext" placeholder="First Name">
+					<input type="text" name="" class="inputtext" placeholder="Last Name">
+					<input type="text" name="" class="inputtext" placeholder="Your Email">
+					<textarea cols="4" rows="6" class="inputmessage" placeholder="Your Messages....!!!!"></textarea>
+					<input type="submit" name="submit" class="submitbutton" value="Submit">
+			</div>
+		</div>
+		</div>
+	</div>
+</div>
+<script type="text/javascript" src="js/jquery-3.5.1.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+		$('a').click(function(){
+			//alert("i am click");
+			var selected = $(this);
+			$('a').removeClass('active');
+			$(selected).addClass('active');
+		});
+		var $a = $('.a'),
+		$b=$('.b'),
+		$c=$('.c'),
+		$d=$('.d'),
+		$home=$('.home'),
+		$aboutme=$('.aboutme'),
+		$cv=$('.cv'),
+		$contactus=$('.contactus');
+		$homeImage=$('.image');
+		$homeImage1=$('.image1');
+
+		$a.click(function(){
+			$home.fadeIn();
+			$homeImage.fadeIn();
+			$aboutme.fadeOut();
+			$cv.fadeOut();
+			$contactus.fadeOut();
+			$homeImage1.fadeOut();
+		});
+		$b.click(function(){
+			$home.fadeOut();
+			$aboutme.fadeIn();
+			$cv.fadeOut();
+			$homeImage.fadeOut();
+			$contactus.fadeOut();
+			$homeImage1.fadeIn();
+		});
+		$c.click(function(){
+			$home.fadeOut();
+			$aboutme.fadeOut();
+			$homeImage.fadeOut();
+			$cv.fadeIn();
+			$contactus.fadeOut();
+			$homeImage.fadeOut();
+		});
+		$d.click(function(){
+			$home.fadeOut();
+			$aboutme.fadeOut();
+			$homeImage.fadeOut();
+			$cv.fadeOut();
+			$contactus.fadeIn();
+			$homeImage.fadeOut();
+		});
+	});
+</script>
+</body>
+</html>
